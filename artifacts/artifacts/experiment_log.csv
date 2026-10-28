@@ -1,0 +1,15 @@
+experiment,chunking,embedding,retrieval,Hit@3,MRR,PaperHit@3,Prec@3,latency_s,index_time_s,n_chunks
+chunking,A_rec_256_40,bge-base,dense,1.0,0.875,1.0,0.542,0.019,0.8,122.0
+chunking,B_rec_384_64,bge-base,dense,1.0,0.938,1.0,0.542,0.018,0.6,85.0
+chunking,C_fixed_1500c,bge-base,dense,0.875,0.667,1.0,0.458,0.018,0.7,84.0
+chunking,D_semantic,bge-base,dense,0.875,0.75,1.0,0.583,0.018,0.8,210.0
+embedding,B_rec_384_64,bge-base,dense,1.0,0.938,1.0,0.542,0.018,0.6,
+embedding,B_rec_384_64,bge-m3,dense,0.875,0.812,1.0,0.625,0.069,6.7,
+embedding,B_rec_384_64,mxbai-large,dense,1.0,0.875,1.0,0.5,0.044,1.7,
+retrieval,B_rec_384_64,bge-base,dense,1.0,0.938,1.0,0.542,0.019,,
+retrieval,B_rec_384_64,bge-base,mmr,1.0,0.938,1.0,0.375,0.021,,
+retrieval,B_rec_384_64,bge-base,hybrid_rrf,1.0,0.917,1.0,0.5,0.02,,
+retrieval,B_rec_384_64,bge-base,bm25,0.875,0.812,1.0,0.458,0.001,,
+retrieval,B_rec_384_64,bge-base,hybrid_rerank,0.875,0.812,1.0,0.583,0.739,,
+retrieval,B_rec_384_64,bge-base,multiquery_rerank,0.875,0.812,1.0,0.583,0.987,,
+held-out retrieval,B_rec_384_64,bge-base,dense,1.0,1.0,1.0,0.444,0.017,,

@@ -1,0 +1,35 @@
+question,answer,pages,human_verdict
+How does the NRW method determine the effective parameters of the 3D-MTMSRR unit cell when it is placed inside a waveguide with perfect electric and magnetic field boundaries along the x- and y-axes?,"The Nicolson‑Ross‑Weir (NRW) method extracts the effective permittivity, permeability and refractive index from the simulated or measured scattering parameters of the unit cell.  
+When the 3D‑MTM‑SRR unit cell is placed inside a waveguide, the waveguide is bounded by perfect electric field (PEC) conditions along the \(x\)-axis and perfect magnetic field (PMC) conditions along the \(y\)-axis. Two waveguide ports are used along the \(z\)-axis, so the electromagnetic wave propagates in the \(z\)-direction.  
+
+In this configuration the electric field in the three sections of the waveguide is expressed as  
+
+\[
+\begin{aligned}
+E_{\text{I}} &= e^{-\gamma_0 h_1} + B_1 e^{\gamma_0 h_1} \quad (8)\\
+E_{\text{II}} &= B_2 e^{-\gamma (h_1+h+h')} + B_3 e^{\gamma (h_1+h+h')} \quad (9)\\
+E_{\text{III}} &= B_4 e^{-\gamma_0 (h+h'+h_2)} \quad (10)
+\end{aligned}
+\]
+
+where  
+
+\[
+\gamma = j\left[\left(\frac{\omega}{c}\right)^2-\left(\frac{2\pi}{\lambda_c}\right)^2\right]^{1/2}, \qquad
+\gamma_0 = j\left[\left(\frac{\omega\mu_r\varepsilon_r}{c}\right)^2-\left(\frac{2\pi}{\lambda_c}\right)^2\right]^{1/2}
+\]
+
+with \(c\) the speed of light, \(\omega\) the angular frequency, \(\lambda_c = 2a\) the cut‑off wavelength, and \(a\) the waveguide width.  
+Using the reflected and transmitted fields \(E_{\text{I}}\) and \(E_{\text{III}}\) (obtained from the scattering parameters), the NRW algorithm solves for the propagation constant \(\gamma_0\) and the impedance of the unit cell. From these, the effective permittivity \(\varepsilon_{\text{eff}}\), permeability \(\mu_{\text{eff}}\) and refractive index \(n_{\text{eff}}\) are calculated.  
+
+This procedure is described in both papers [1] and [2] and is applied to the 3D‑MTM‑SRR unit cell inside the waveguide with the specified boundary conditions.","[('paper3', 6), ('paper4', 4), ('paper3', 4)]",
+How does adding a 3D-MTM superstrate to a 2 × 2 microstrip patch antenna array increase its gain by approximately 3.2 dBi and reduce the half‑power beamwidth by about 12.85°?,"Adding the 3D‑MTM superstrate above the 2 × 2 microstrip patch array improves the antenna’s radiation characteristics in two complementary ways:
+
+1. **Gain increase (~3.2 dBi)** – The superstrate acts as a high‑refractive‑index dielectric that reflects surface waves back toward the radiating elements, thereby concentrating the radiated power in the far‑field.  The measured and simulated results show the array’s co‑polar gain rising from about 6.5 dBi to 9.7 dBi, an enhancement of ≈ 3.2 dBi [2].
+
+2. **Half‑power beamwidth (HPBW) reduction (~12.85°)** – By redirecting the surface‑wave energy and reinforcing the main lobe, the superstrate narrows the angular spread of the radiated beam.  The HPBW is observed to shrink from its original value to a narrower beam, decreasing by roughly 12.85° [2].
+
+The underlying mechanism is that the 3D‑MTM superstrate concentrates the electric field on its unit‑cell surfaces, increasing coupling fields and suppressing near‑field coupling.  This concentrates the radiated energy, boosting directivity and thus gain, while also tightening the beamwidth [3].","[('paper4', 7), ('paper4', 8), ('paper4', 6)]",
+How does positioning the FIN-DGS in the H‑plane of a square microstrip patch array suppress the cross‑polarization radiation pattern and improve the CP‑XP ratio across a wide angular range?,"The FIN‑DGS is etched from the ground plane **in the H‑plane direction between two contiguous elements in a symmetric manner**.  
+Because it follows the radiating‑element contour path, it **suppresses the fields near the non‑resonating region** without interrupting the primary radiating region, thereby reducing the orthogonal (TM02) fields that produce cross‑polarisation (XP) radiation [2].  
+This suppression is observed experimentally as **< 35 dB XP (±50°) radiation around boresight** while the co‑polarisation (CP) gain remains essentially unchanged, giving a **high CP‑XP ratio over a wide angular range** [1], [3].","[('paper1', 14), ('paper1', 3), ('paper1', 2)]",
